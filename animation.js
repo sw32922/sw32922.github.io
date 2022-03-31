@@ -26,7 +26,6 @@ let txm = ctx.measureText(txt);
 let txtWidth = txm.width;
 let txtHeight = txm.fontBoundingBoxDescent;
 
-let prevTime = 0.0;
 let t = 0.0;
 
 const FPS = 60;
@@ -34,8 +33,6 @@ const FPS = 60;
 function animation() {
 
 	ctx.clearRect(0, 0, WIDTH, HEIGHT);
-
-	let deltaTime = t - prevTime;
 
 	let x = tWave(pos[0] + t * dir[0] * speed) * (WIDTH - txtWidth);
 	let y = tWave(pos[1] + t * dir[1] * speed) * (HEIGHT - txtHeight);
