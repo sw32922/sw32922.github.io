@@ -6,30 +6,69 @@
 		
 		<style>
 			#canvas {
-				outline: 1px dotted black;
+				border: 1px dotted black;
+			}
+						
+			#links {
+				text-align: center;
+				border: 1px dotted black;
+				background-image: url("fire.png");
+				background-size: contain;
 			}
 			
-			#debug {
-				background-color: grey;
+			#links * {
+				margin-top: 0px;
+				margin-bottom: 0px;
+			}
+			
+			.centerdiv {
+				width: fit-content;
+				margin: 0 auto;
+			}
+			
+			body {
+				background-color: orange;
+			}
+			
+			code {
+				background-color: lightgrey;
 				color: red;
 			}
 			
-			#stuff {
-				display: inline-block;
+			#main {
+				background-color: goldenrod;
 			}
 			
-			h1 { 
-				text-align: center;
+			#debug {
+				display: block;
+				margin-top: 0px;
 			}
 		</style>
 	</head>
 	
 	<body>
-		<h1>Cool Website</h1>
-		
-		<div id="stuff">
-			<canvas id="canvas" width="256" height="128"></canvas>
-			<p id="debug"></p>
+		<div id="links">
+			<h1>Cool Website</h1>
+			<h4>Links:</h4>
+			<nav>
+				<a href="/">Home</a>
+			</nav>
+		</div>
+		<div class="centerdiv" id="main">
+			<h2>bouncing text animation</h2>
+			<p>
+			An animation which uses a javascript canvas.
+			<br>
+			It uses a triangle wave function which is defined as 
+			<code>tWave(x) = abs(mod(x, 2) - 1)</code>.
+			<br>
+			It then uses this to create a bouncing effect between each edge.
+			</p>
+			
+			<div class="centerdiv">
+				<canvas id="canvas" width="256" height="128"></canvas>
+				<code id="debug"></code>
+			</div>
 		</div>
 		
 		<script src="animation.js"></script>

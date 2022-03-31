@@ -40,6 +40,8 @@ function animation() {
 	let x = tWave(pos[0] + t * deltaTime * dir[0] * speed) * (WIDTH - txtWidth);
 	let y = tWave(pos[1] + t * deltaTime * dir[1] * speed) * (HEIGHT - txtHeight);
 
+	//debug(`position: x = ${Math.floor(x)}, y = ${Math.floor(y)}`);
+
 	ctx.fillText(txt, x, y);
 
 	prevTime = t;
