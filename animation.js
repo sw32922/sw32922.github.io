@@ -17,7 +17,7 @@ let pos = [Math.random(), Math.random()];
 let theta = Math.random() * Math.PI * 2;
 let dir = [Math.cos(theta), Math.sin(theta)];
 
-let speed = 75;
+let speed = 1.5;
 
 ctx.textBaseline = "top";
 ctx.font = "2em Arial";
@@ -37,8 +37,8 @@ function animation() {
 
 	let deltaTime = t - prevTime;
 
-	let x = tWave(pos[0] + t * deltaTime * dir[0] * speed) * (WIDTH - txtWidth);
-	let y = tWave(pos[1] + t * deltaTime * dir[1] * speed) * (HEIGHT - txtHeight);
+	let x = tWave(pos[0] + t * dir[0] * speed) * (WIDTH - txtWidth);
+	let y = tWave(pos[1] + t * dir[1] * speed) * (HEIGHT - txtHeight);
 
 	//debug(`position: x = ${Math.floor(x)}, y = ${Math.floor(y)}`);
 
