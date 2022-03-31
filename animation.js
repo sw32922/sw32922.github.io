@@ -41,7 +41,6 @@ function animation() {
 
 	ctx.fillText(txt, x, y);
 
-	prevTime = t;
 	t += 1/60;
 }
 
