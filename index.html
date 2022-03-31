@@ -6,7 +6,7 @@
 		
 		<style>
 			#canvas {
-				outline: 1px solid black;
+				outline: 1px dotted black;
 			}
 			
 			#debug {
@@ -22,7 +22,7 @@
 	
 	<body>
 		<div id="stuff">
-			<canvas id="canvas" width="512" height="512"></canvas>
+			<canvas id="canvas" width="256" height="128"></canvas>
 			<p id="debug"></p>
 		</div>
 		
@@ -63,8 +63,8 @@
 
 				let deltaTime = t - prevTime;
 
-				let x = tWave(pos[0] + t * deltaTime * vel[0] * 20) * (WIDTH - txtWidth);
-				let y = tWave(pos[1] + t * deltaTime * vel[1] * 20) * (HEIGHT - txtHeight);
+				let x = tWave(pos[0] + t * deltaTime * vel[0] * 75) * (WIDTH - txtWidth);
+				let y = tWave(pos[1] + t * deltaTime * vel[1] * 75) * (HEIGHT - txtHeight);
 
 				ctx.fillText(txt, x, y);
 				
