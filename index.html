@@ -2,13 +2,9 @@
 
 <html>
 	<head>
-		<title>Page</title>
+		<title>Cool Website</title>
 		
-		<style>
-			#canvas {
-				border: 1px dotted black;
-			}
-						
+		<style>		
 			#links {
 				text-align: center;
 				border: 1px dotted black;
@@ -21,9 +17,48 @@
 				margin-bottom: 0px;
 			}
 			
+			.section {
+				width: 50%;
+				
+				margin: 0 auto;
+				
+				padding-left: 4px;
+				padding-right: 4px;
+				
+				background-color: goldenrod;
+			}
+			
+			.section h1 {
+				text-align: center;
+			}
+			
+			.section img {
+				display: block;
+				margin: 0 auto;
+			}
+			
+			.section img, .animationCanvas {
+				max-width: 100%;
+				height: auto;
+			}
+			
 			.centerdiv {
 				width: fit-content;
 				margin: 0 auto;
+			}
+			
+			/* source links */
+			.sourcedImage {
+				text-align: right;
+			}
+			
+			.animationCanvas {
+				outline: 1px dotted black;
+			}
+			
+			.animationDebug {
+				display: block;
+				margin-top: 0px;
 			}
 			
 			body {
@@ -33,15 +68,6 @@
 			code {
 				background-color: lightgrey;
 				color: red;
-			}
-			
-			#main {
-				background-color: goldenrod;
-			}
-			
-			#debug {
-				display: block;
-				margin-top: 0px;
 			}
 		</style>
 	</head>
@@ -54,8 +80,11 @@
 				<a href="/">Home</a>
 			</nav>
 		</div>
-		<div class="centerdiv" id="main">
-			<h2>bouncing text animation</h2>
+
+		<div class="section" id="animations">
+			<h1>Canvas Animations</h1>
+
+			<h2>Bouncing text animation</h2>
 			<p>
 			An animation which uses a javascript canvas.
 			<br>
@@ -65,12 +94,24 @@
 			It then uses this to create a bouncing effect between each edge.
 			</p>
 			
-			<div class="centerdiv">
-				<canvas id="canvas" width="256" height="128"></canvas>
-				<code id="debug"></code>
+			<div id="ANIMATION_BouncingHello"></div>
+			
+			<h2>Mandelbrot Set renderer</h2>
+			<div id="ANIMATION_Mandelbrot"></div>
+		</div>
+		
+		<div class="section" id="gallery">
+			<h1>Images</h1>
+
+			<h2>Mandelbrot Set zoom gif</h2>
+			<div class="centerdiv sourcedImage">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mandelbrot_sequence_new.gif">
+				<a href="https://en.wikipedia.org/wiki/File:Mandelbrot_sequence_new.gif">source</a>
 			</div>
 		</div>
 		
-		<script src="animation.js"></script>
+		<script src="onerror.js"></script>
+		<script src="animationClass.js"></script>
+		<script src="animations.js"></script>
 	</body>
 </html>
