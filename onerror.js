@@ -1,4 +1,4 @@
-if (0) {
+if (1) {
 	window.onerror = function(msg, src, row, col, err) {
 		/*alert(`message: ${msg}
 source: ${src}

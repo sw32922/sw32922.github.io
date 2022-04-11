@@ -8,13 +8,39 @@
 			#links {
 				text-align: center;
 				border: 1px dotted black;
+				
+				background-color: darkred;
 				background-image: url("fire.png");
 				background-size: contain;
+				
+				box-shadow: 0px 0px 10px 1px black;
+				text-shadow: 0px 0px 1px white;
 			}
 			
 			#links * {
 				margin-top: 0px;
 				margin-bottom: 0px;
+			}
+			
+			#pageBackground_animationCanvas {
+				position: fixed;
+				
+				width: 100%;
+				height: 100%;
+				
+				left: 0;
+				top: 0;
+				
+				image-rendering: pixelated;
+			}
+			
+			#pageBackground_animationDebug {
+			
+			}
+			
+			#main {
+				position: relative;
+				z-index: 2;
 			}
 			
 			.section {
@@ -26,6 +52,8 @@
 				padding-right: 4px;
 				
 				background-color: goldenrod;
+				
+				box-shadow: 0px 0px 10px 1px black;
 			}
 			
 			.section h1 {
@@ -62,7 +90,7 @@
 			}
 			
 			body {
-				background-color: orange;
+				background-color: black;
 			}
 			
 			code {
@@ -73,6 +101,9 @@
 	</head>
 	
 	<body>
+		<div id="main">
+		
+		
 		<div id="links">
 			<h1>Cool Website</h1>
 			<h4>Links:</h4>
@@ -110,8 +141,12 @@
 			</div>
 		</div>
 		
+		
+		</div>
+		
 		<script src="onerror.js"></script>
 		<script src="animationClass.js"></script>
+		<script src="pageBackgroundAnimation.js"></script>
 		<script src="animations.js"></script>
 	</body>
 </html>

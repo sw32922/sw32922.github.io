@@ -1,21 +1,42 @@
 class Animation {
 	constructor(containerId, width, height, onStart, onUpdate) {
 		let section = document.getElementById("animations");
-		
-		let container = document.getElementById(containerId);
-		container.setAttribute("class", "centerdiv");
+
+		let isPageBackground = containerId === null;
+
+		let container;
+		if (isPageBackground) {
+			container = document.body;
+		} else {
+			container = document.getElementById(containerId);
+			container.setAttribute("class", "centerdiv");
+		}
 		
 			let canvas = document.createElement("canvas");
-			canvas.setAttribute("class", "animationCanvas");
+			if (isPageBackground) {
+				canvas.setAttribute("id", "pageBackground_animationCanvas");
+			} else {
+				canvas.setAttribute("class", "animationCanvas");
+			}
 			canvas.setAttribute("width", width);
 			canvas.setAttribute("height", height);
 			
 			let debugBox = document.createElement("code");
-			debugBox.setAttribute("class", "animationDebug");
+			
+			if (isPageBackground) {
+				debugBox.setAttribute("id", "pageBackground_animationDebug");
+			} else {
+				debugBox.setAttribute("class", "animationDebug");
+			}
 		
-		container.appendChild(canvas);
-		container.appendChild(debugBox);
-		
+		if (isPageBackground) {
+			container.insertBefore(debugBox, container.firstChild);
+			container.insertBefore(canvas, container.firstChild);
+		} else {
+			container.appendChild(canvas);
+			container.appendChild(debugBox);
+		}
+
 		let ctx = canvas.getContext("2d");
 		
 		this.width = width;
@@ -25,7 +46,7 @@ class Animation {
 		this.debugBox = debugBox;
 		this.ctx = ctx;
 		
-		this.onStart = onStart;
+		this.onStart = onStart || function() {};
 		this.onUpdate = onUpdate;
 		
 		this.onStart();

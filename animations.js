@@ -72,19 +72,19 @@ function isPointInMandelbrot(cX, cY, iterations) {
 function mandelbrot_onUpdate(t, frame) {
 	let d = this;
 	
-	let Y = frame;
+	let y = frame;
 	
-	if (Y > d.height) {
+	if (y > d.height) {
 		this.pause();
 		return;
 	}
 	
 	// / d.width * 4: divide by width instead of height to avoid squishing
-	let cY = (Y - d.height / 2) / d.width * 4;
+	let cY = (y - d.height / 2) / d.width * 4;
 	
-	for (let X = 0; X < d.width; X++) {
+	for (let x = 0; x < d.width; x++) {
 		// 1.5 instead of 2 puts it closer towards the middle
-		let cX = (X - d.width / 1.5) / d.width * 4;
+		let cX = (x - d.width / 1.5) / d.width * 4;
 		
 		let isIn_or_iters = isPointInMandelbrot(cX, cY, 100);
 		
@@ -93,8 +93,8 @@ function mandelbrot_onUpdate(t, frame) {
 		} else {
 			d.ctx.fillStyle = d.hsl(isIn_or_iters * 2, 100, 50);
 		}
-		d.ctx.fillRect(X, Y, 1, 1);
+		d.ctx.fillRect(x, y, 1, 1);
 	}
 }
 
-let mandelbrot = new Animation("ANIMATION_Mandelbrot", 512, 256, function(){}, mandelbrot_onUpdate);
+let mandelbrot = new Animation("ANIMATION_Mandelbrot", 512, 256, null, mandelbrot_onUpdate);
