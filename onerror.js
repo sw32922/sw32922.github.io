@@ -7,6 +7,7 @@ column: ${col}
 error: ${err}`);
 	}*/
 	
-	// "There's an error! I would tell you where but the above code doesn't work"
-	alert("Error");
+		// "There's an error! I would tell you where but the above code doesn't work"
+		alert("Error");
+	}
 }
