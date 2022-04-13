@@ -17,7 +17,7 @@ function bouncingHello_onStart() {
 	this.txt = txt;
 
 	let txtWidth = txm.width;
-	let txtHeight = txm.fontBoundingBoxDescent;
+	let txtHeight = txm.actualBoundingBoxDescent;
 
 	this.maxX = this.width - txtWidth;
 	this.maxY = this.height - txtHeight;
@@ -98,3 +98,4 @@ function mandelbrot_onUpdate(t, frame) {
 }
 
 let mandelbrot = new Animation("ANIMATION_Mandelbrot", 512, 256, null, mandelbrot_onUpdate);
+
