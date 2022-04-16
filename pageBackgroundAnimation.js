@@ -19,7 +19,7 @@ function pageBackground_onUpdate(t, frame) {
 	let s = Math.max(d.width, d.height) - 1;
 	
 	// calculate the maximum value that can be attained from x ^ y
-	// bitCount(s): calculate number of bits required to store the max resolution number (s)
+	// bitCount(s): calculate number of bits taken to store the max val the component of a coord could have
 	// 2 **: "create" a number with that many bits, and set all bits to one
 	// - 1: `2 **` was actually incorrect, convert from something like 1000 (incorrect) to 111 (correct)
 	let maxPossibleValue = 2 ** bitCount(s) - 1;
