@@ -1,15 +1,28 @@
+// get the amount of bits it takes to store a positive number
+function bitCount(x) {
+	return x == 0 ? 1 : Math.ceil(Math.log2(x + 1));
+}
+
 function pageBackground_onUpdate(t, frame) {
 	let d = this;
 
 	d.ctx.clearRect(0, 0, d.width, d.height);
 
-	let s = Math.max(d.width, d.height);
+	// maximum value that the component of a coordinate can have
+	//
+	// on a 1920x1080 canvas, this would be 1919.
+	//
+	// it doesn't matter that in that example, only the x component
+	// can have a value that large. this is what we want.
+	//
+	// 1 is subtracted because coordinates start from 0
+	let s = Math.max(d.width, d.height) - 1;
 	
 	// calculate the maximum value that can be attained from x ^ y
-	// Math.ceil(...): calculate number of bits required to store the max resolution number (s)
+	// bitCount(s): calculate number of bits required to store the max resolution number (s)
 	// 2 **: "create" a number with that many bits, and set all bits to one
 	// - 1: `2 **` was actually incorrect, convert from something like 1000 (incorrect) to 111 (correct)
-	let maxPossibleValue = 2 ** Math.ceil(Math.log2(s)) - 1;
+	let maxPossibleValue = 2 ** bitCount(s) - 1;
 	
 	for (let y = 0; y < d.height; y++) {
 		for (let x = 0; x < d.width; x++) {
