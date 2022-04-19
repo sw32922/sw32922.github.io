@@ -1,4 +1,8 @@
 #links {
+
+	/* allow for positioning the splash text on the scale of 0...100% */
+	position: relative;
+
 	text-align: center;
 	border: 1px dotted black;
 
@@ -13,6 +17,41 @@
 #links * {
 	margin-top: 0px;
 	margin-bottom: 0px;
+}
+
+@keyframes splashAnimation {
+	from {
+		font-size: .5em;
+		transform: rotate(-20deg);
+	}
+	
+	to {
+		font-size: 1.5em;
+		transform: rotate(20deg);
+	}
+}
+
+#splashContainer {
+	position: absolute;
+	
+	/* https://stackoverflow.com/a/41129715 */
+	display: flex;
+	
+	width: 400px;
+	height: 120px;
+	
+	margin-top: -60px;
+	right: 2%;
+	
+	/*background-color: blue;*/
+}
+
+#splash {
+	margin: auto;
+
+	animation: splashAnimation 0.5s infinite alternate;
+	
+	color: yellow;
 }
 
 #pageBackground_animationCanvas {
@@ -44,6 +83,7 @@
 
 	padding-left: 4px;
 	padding-right: 4px;
+	padding-bottom: 4px;
 
 	background-color: goldenrod;
 
@@ -103,4 +143,10 @@ hr {
 
 [data-include] {
 	display: none;
+}
+
+@media (max-width: 750px) {
+	#splashContainer {
+		display: none;
+	}
 }

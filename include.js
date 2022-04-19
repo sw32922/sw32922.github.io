@@ -11,8 +11,12 @@ let navbar = `
 	<h1>Cool Website</h1>
 	<h4>Links:</h4>
 	<nav>
-		<a href="home.html">Home</a>
+		<a href="home.html">Home</a>,
+		<a href="minesweeper.html">Minesweeper</a>
 	</nav>
+	<div id="splashContainer">
+		<p id="splash"></p>
+	</div>
 </div>
 `;
 
@@ -44,3 +48,25 @@ function replaceIncludes(doc) {
 }
 
 replaceIncludes(document);
+
+/*
+	splash text
+*/
+
+let splashTexts = {
+	"home.html":
+		[
+			"Cool Website!",
+			"Obnoxious Animations!"
+		]
+};
+
+let page = window.location.pathname.split("/").pop();
+
+let splashEl = document.getElementById("splash");
+
+let pageSplashTexts = splashTexts[page];
+let splash;
+if (pageSplashTexts) {
+	splashEl.innerText = pageSplashTexts[ Math.floor(Math.random() * pageSplashTexts.length) ];
+}
