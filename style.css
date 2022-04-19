@@ -149,4 +149,8 @@ hr {
 	#splashContainer {
 		display: none;
 	}
+
+	.section {
+		width: auto;
+	}
 }
