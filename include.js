@@ -11,8 +11,7 @@ let navbar = `
 	<h1>Cool Website</h1>
 	<h4>Links:</h4>
 	<nav>
-		<a href="home.html">Home</a>,
-		<a href="minesweeper.html">Minesweeper</a>
+		<a href="home.html">Home</a>
 	</nav>
 	<div id="splashContainer">
 		<p id="splash"></p>
