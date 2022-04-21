@@ -1,3 +1,5 @@
+/* navigation bar */
+
 #links {
 
 	/* allow for positioning the splash text on the scale of 0...100% */
@@ -11,7 +13,16 @@
 	background-size: contain;
 
 	box-shadow: 0px 0px 10px 1px black;
-	text-shadow: 0px 0px 1px white;
+	
+}
+
+#links > :not(#splashContainer, nav) {
+	text-shadow: 0px 0px 4px white;
+}
+
+nav a {
+	color: gold;
+	text-shadow: 0px 0px 4px black;
 }
 
 #links * {
@@ -51,6 +62,7 @@
 
 	animation: splashAnimation 0.5s infinite alternate;
 	
+	font-family: "Comic Sans MS";
 	color: yellow;
 }
 
@@ -65,6 +77,10 @@
 
 	image-rendering: pixelated;
 }
+
+
+/* end navigation bar */
+
 
 #pageBackground_animationDebug {
 	position: fixed;
