@@ -54,6 +54,8 @@ nav a {
 	margin-top: -60px;
 	right: 2%;
 	
+	pointer-events: none;
+	
 	/*background-color: blue;*/
 }
 
