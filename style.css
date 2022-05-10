@@ -157,6 +157,40 @@ hr {
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
+
+/* tables */
+
+table {
+	margin: 0 auto;
+	border: 1px solid black;
+	
+	border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+	background-color: mediumslateblue;
+}
+
+tr:nth-child(odd) {
+	background-color: cornflowerblue;
+}
+
+tr > * {
+	padding: 4px;
+	border: 1px solid black;
+}
+
+th {
+	background-color: royalblue;
+}
+
+#tableCorner {
+	background-color: cornflowerblue;
+}
+
+/* end tables */
+
+
 [data-include] {
 	display: none;
 }
