@@ -15,7 +15,7 @@ let navbar = `
 		<a href="tagExamples.html">HTML tags</a>
 	</nav>
 	<div id="splashContainer">
-		<p id="splash"></p>
+		<div id="splash"></div>
 	</div>
 </div>
 `;
@@ -58,6 +58,15 @@ let splashTexts = {
 		[
 			"Cool Website!",
 			"Obnoxious Animations!"
+		],
+		
+	"tagExamples.html":
+		[
+			`<ul>
+				<li>lists!!!!</li>
+				<li>lists!!!!!!!!</li>
+				<li>lists!!!!!!!!!!!!</li>
+			</ul>`
 		]
 };
 
@@ -68,5 +77,5 @@ let splashEl = document.getElementById("splash");
 let pageSplashTexts = splashTexts[page];
 let splash;
 if (pageSplashTexts) {
-	splashEl.innerText = pageSplashTexts[ Math.floor(Math.random() * pageSplashTexts.length) ];
+	splashEl.innerHTML = pageSplashTexts[ Math.floor(Math.random() * pageSplashTexts.length) ];
 }

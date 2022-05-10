@@ -63,6 +63,8 @@ nav a {
 	animation: splashAnimation 0.5s infinite alternate;
 	
 	font-family: "Comic Sans MS";
+	text-align: left;
+	
 	color: yellow;
 }
 
