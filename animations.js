@@ -1,6 +1,13 @@
 
 function bouncingHello_onStart() {
-	this.tWave = x => Math.abs(Math.abs(x) % 2 - 1);
+
+	// true modulo function
+	//
+	// outputs the same sign as the modulus
+	// e.g.: mod(-1, 360) = 359
+	let mod = (n, m) => (n % m + m) % m;
+	
+	this.tWave = x => Math.abs(mod(x, 2) - 1);
 
 	this.pos = [Math.random(), Math.random()];
 	let theta = Math.random() * Math.PI * 2;
