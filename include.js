@@ -7,7 +7,7 @@
 */
 
 let navbar = `
-<div id="links">
+<div id="links" class="navOrFooter">
 	<h1>Cool Website</h1>
 	<h4>Links:</h4>
 	<nav>
@@ -20,8 +20,25 @@ let navbar = `
 </div>
 `;
 
+let footer = `
+<div id="footer" class="navOrFooter">
+<div id="badges">
+
+<a href="https://www.defectivebydesign.org/">
+<img src="https://defectivebydesign.org/sites/nodrm.civicactions.net/files/images/elim_lg_btn.gif" alt="Eliminate DRM!" width="110" height="32">
+</a>
+
+<a href="https://based.cooking">
+<img src="https://lukesmith.xyz/pix/buttons/basedcooking.gif" alt="Cooking without web obesity" width="88" height="31">
+</a>
+
+</div>
+</div>
+`;
+
 let includes = {
-	"navbar": navbar
+	"navbar": navbar,
+	"footer": footer
 }
 
 function strToElements(html) {
