@@ -24,13 +24,15 @@ let footer = `
 <div id="footer" class="navOrFooter">
 <div id="badges">
 
-<a href="https://www.defectivebydesign.org/">
+
+<a href="https://www.defectivebydesign.org/" title="Eliminate DRM!">
 <img src="https://defectivebydesign.org/sites/nodrm.civicactions.net/files/images/elim_lg_btn.gif" alt="Eliminate DRM!" width="110" height="32">
 </a>
 
-<a href="https://based.cooking">
-<img src="https://lukesmith.xyz/pix/buttons/basedcooking.gif" alt="Cooking without web obesity" width="88" height="31">
+<a href="https://based.cooking/" title="Cooking without web obesity">
+<img src="https://lukesmith.xyz/pix/buttons/basedcooking.gif" title="Cooking without web obesity" alt="Cooking without web obesity" width="88" height="31">
 </a>
+
 
 </div>
 </div>
