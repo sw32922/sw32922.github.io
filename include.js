@@ -37,6 +37,9 @@ let footer = `
 <img src="https://lukesmith.xyz/pix/buttons/basedcooking.gif" alt="Cooking without web obesity" width="88" height="31">
 </a>
 
+<a href="https://www.gnu.org/" title="GNU is Not Unix">
+<img src="https://web.archive.org/web/20110902140654im_/http://graphics.rootmode.com/images/button-88x31-gnu-2.png" alt="GNU is Not Unix" width="88" height="31">
+</a>
 
 </div>
 </div>
